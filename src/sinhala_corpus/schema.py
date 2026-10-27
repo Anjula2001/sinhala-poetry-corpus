@@ -45,6 +45,24 @@ class RecordRights(BaseModel):
         return self
 
 
+class ExtractionProvenance(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    source_revision_id: int = Field(gt=0, strict=True)
+    source_revision_timestamp: AwareDatetime
+    source_page_title: str = Field(min_length=1)
+    snapshot_sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
+    parser_version: int = Field(gt=0, strict=True)
+
+    segment_type: Literal["verse"] = "verse"
+    segment_number: int = Field(gt=0, strict=True)
+    raw_start_line: int = Field(gt=0, strict=True)
+
+    reviewer: str | None = None
+    reviewed_at: AwareDatetime | None = None
+    review_notes: str = ""
+
+
 class CorpusRecord(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
@@ -65,8 +83,9 @@ class CorpusRecord(BaseModel):
     source_id: str = Field(pattern=r"^[a-z][a-z0-9_]*$")
     source_record_id: str = Field(min_length=1)
     source_url: HttpUrl
-    retrieved_at: AwareDatetime
+    retrieved_at: AwareDatetime | None = None
     source_updated_at: AwareDatetime | None = None
+    provenance: ExtractionProvenance | None = None
 
     rights: RecordRights = Field(default_factory=RecordRights)
     review_status: Literal["pending", "approved", "rejected"] = "pending"

@@ -1,0 +1,13 @@
+schema_version: 1
+source_id: wikisource_si
+revision_id: 1042800
+
+# Missing decisions mean pending, never approved.
+decisions:
+  - verse_number: 49
+    status: pending
+    reviewer: null
+    reviewed_at: null
+    notes: >-
+      Three unexpected greater-than characters occur in the source
+      text. Preserve them until checked against a reliable edition.
