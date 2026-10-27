@@ -39,15 +39,15 @@ sources:
   - id: wikisource_si
     name: Sinhala Wikisource
     homepage: https://wikisource.org/wiki/Main_Page/si
-    documentation_url: null
-    base_url: null
+    documentation_url: https://www.mediawiki.org/wiki/API:Main_page
+    base_url: https://wikisource.org/w/api.php
 
     content_types:
       - poem
 
     access_method: mediawiki_api
-    enabled: false
-    connectivity_status: unverified
+    enabled: true
+    connectivity_status: verified
 
     rights:
       status: pending_review
