@@ -4,6 +4,7 @@ import json
 import pytest
 
 from sinhala_corpus.convert import build_records
+from sinhala_corpus.manifests import SnapshotManifest
 from sinhala_corpus.parsers.sirith_maldama import EXPECTED_TITLE, parse_verses
 from sinhala_corpus.reviews import ReviewDecision, ReviewFile
 
@@ -87,3 +88,43 @@ def test_modified_candidate_text_is_rejected(inputs):
 
     with pytest.raises(ValueError, match="parser output"):
         build_records(raw, candidates, reviews)
+
+
+@pytest.fixture
+def manifest(inputs):
+    raw, _, _ = inputs
+    return SnapshotManifest(
+        source_id="wikisource_si",
+        revision_id=1042800,
+        api_url="https://wikisource.org/w/api.php",
+        retrieved_at="2026-10-27T14:00:00Z",
+        size_bytes=len(raw),
+        sha256=hashlib.sha256(raw).hexdigest(),
+    )
+
+
+def test_manifest_supplies_retrieval_timestamp(inputs, manifest):
+    record = build_records(*inputs, manifest=manifest)[0]
+
+    assert record.retrieved_at == manifest.retrieved_at
+
+
+def test_manifest_revision_mismatch_is_rejected(inputs, manifest):
+    manifest = manifest.model_copy(update={"revision_id": 999})
+
+    with pytest.raises(ValueError, match="Manifest source or revision mismatch"):
+        build_records(*inputs, manifest=manifest)
+
+
+def test_manifest_source_mismatch_is_rejected(inputs, manifest):
+    manifest = manifest.model_copy(update={"source_id": "another_source"})
+
+    with pytest.raises(ValueError, match="Manifest source or revision mismatch"):
+        build_records(*inputs, manifest=manifest)
+
+
+def test_manifest_checksum_mismatch_is_rejected(inputs, manifest):
+    manifest = manifest.model_copy(update={"sha256": "0" * 64})
+
+    with pytest.raises(ValueError, match="checksum"):
+        build_records(*inputs, manifest=manifest)

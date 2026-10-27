@@ -3,6 +3,11 @@ import hashlib
 import json
 from pathlib import Path
 
+from sinhala_corpus.manifests import (
+    SnapshotManifest,
+    load_manifest,
+    verify_snapshot_content,
+)
 from sinhala_corpus.parsers.sirith_maldama import EXPECTED_TITLE, parse_verses
 from sinhala_corpus.reviews import ReviewFile, load_reviews
 from sinhala_corpus.schema import CorpusRecord, ExtractionProvenance
@@ -12,12 +17,18 @@ def build_records(
     raw: bytes,
     candidates: dict,
     reviews: ReviewFile,
+    manifest: SnapshotManifest | None = None,
 ) -> list[CorpusRecord]:
     payload = json.loads(raw)
     page = payload["query"]["pages"][0]
     revision = page["revisions"][0]
     revision_id = revision["revid"]
     checksum = hashlib.sha256(raw).hexdigest()
+    if manifest is not None:
+        verify_snapshot_content(raw, manifest)
+
+        if manifest.source_id != "wikisource_si" or manifest.revision_id != revision_id:
+            raise ValueError("Manifest source or revision mismatch.")
 
     if page["title"] != EXPECTED_TITLE or revision_id != 1042800:
         raise ValueError("Unsupported source page or revision.")
@@ -80,7 +91,7 @@ def build_records(
             source_id="wikisource_si",
             source_record_id=str(page["pageid"]),
             source_url=(f"https://wikisource.org/w/index.php?oldid={revision_id}"),
-            retrieved_at=None,
+            retrieved_at=manifest.retrieved_at if manifest else None,
             source_updated_at=revision["timestamp"],
             review_status=decision.status if decision else "pending",
             quality_flags=verse["quality_flags"],
@@ -99,10 +110,18 @@ def main() -> None:
     parser.add_argument("--output", required=True, type=Path)
     args = parser.parse_args()
 
+    raw = args.snapshot.read_bytes()
+    manifest_path = args.snapshot.with_suffix(".meta.json")
+
+    # Missing manifests are allowed for legacy snapshots.
+    # Existing but invalid manifests must fail validation.
+    manifest = load_manifest(args.snapshot) if manifest_path.exists() else None
+
     records = build_records(
-        args.snapshot.read_bytes(),
+        raw,
         json.loads(args.candidates.read_text(encoding="utf-8")),
         load_reviews(args.reviews),
+        manifest=manifest,
     )
 
     args.output.parent.mkdir(parents=True, exist_ok=True)

@@ -17,14 +17,19 @@ class SnapshotManifest(BaseModel):
     sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
 
 
-def verify_snapshot(path: Path, manifest: SnapshotManifest) -> None:
-    raw = path.read_bytes()
-
+def verify_snapshot_content(
+    raw: bytes,
+    manifest: SnapshotManifest,
+) -> None:
     if len(raw) != manifest.size_bytes:
         raise ValueError("Snapshot size does not match the manifest.")
 
     if hashlib.sha256(raw).hexdigest() != manifest.sha256:
         raise ValueError("Snapshot checksum does not match the manifest.")
+
+
+def verify_snapshot(path: Path, manifest: SnapshotManifest) -> None:
+    verify_snapshot_content(path.read_bytes(), manifest)
 
 
 def write_manifest(
