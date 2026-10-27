@@ -1,0 +1,63 @@
+schema_version: 1
+
+# Our conservative collection settings.
+# These are not rate limits published by the sources.
+collection_defaults:
+  timeout_seconds: 30
+  request_interval_seconds: 2
+  max_retries: 3
+  max_records_per_run: 20
+
+sources:
+  - id: mathaka
+    name: Mathaka
+    homepage: https://mathaka.org/en
+    documentation_url: https://mathaka.org/en/api-docs
+    base_url: https://mathaka.org/api
+
+    content_types:
+      - song_lyrics
+
+    access_method: api
+    enabled: false
+    connectivity_status: unverified
+
+    rights:
+      status: pending_review
+      declared_database_license: ODbL-1.0
+      content_license: null
+      evidence_urls:
+        - https://mathaka.org/en/about
+      public_release_allowed: false
+
+    notes: >-
+      Documentation describes a read-only API using short-lived
+      proof-of-work tokens. Live connectivity and current access
+      rules require verification. Database licensing alone does
+      not establish rights to redistribute individual lyrics.
+
+  - id: wikisource_si
+    name: Sinhala Wikisource
+    homepage: https://wikisource.org/wiki/Main_Page/si
+    documentation_url: null
+    base_url: null
+
+    content_types:
+      - poem
+
+    access_method: mediawiki_api
+    enabled: false
+    connectivity_status: unverified
+
+    rights:
+      status: pending_review
+      declared_database_license: null
+      content_license: null
+      evidence_urls:
+        - https://wikisource.org/wiki/Main_Page/si
+      public_release_allowed: false
+
+    notes: >-
+      Candidate source for classical Sinhala poetry.
+      Verify the API endpoint and each selected work's edition,
+      attribution requirements, and copyright or license status.
