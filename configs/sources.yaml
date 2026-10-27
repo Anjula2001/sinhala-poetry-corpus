@@ -20,7 +20,7 @@ sources:
 
     access_method: api
     enabled: false
-    connectivity_status: unverified
+    connectivity_status: unavailable
 
     rights:
       status: pending_review
