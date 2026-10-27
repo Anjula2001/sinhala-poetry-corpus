@@ -1,10 +1,12 @@
 import argparse
 import hashlib
 import sys
+from datetime import UTC, datetime
 from pathlib import Path
 
 import httpx
 
+from sinhala_corpus.manifests import SnapshotManifest, write_manifest
 from sinhala_corpus.sources import load_sources
 
 
@@ -110,7 +112,18 @@ def main() -> int:
         ) as client:
             content = fetch_revision(client, str(source.base_url), args.revision)
 
+        retrieved_at = datetime.now(UTC)
         checksum = save_snapshot(output, content)
+
+        manifest = SnapshotManifest(
+            source_id=source.id,
+            revision_id=args.revision,
+            api_url=source.base_url,
+            retrieved_at=retrieved_at,
+            size_bytes=len(content),
+            sha256=checksum,
+        )
+        manifest_path = write_manifest(output, manifest)
 
     except (httpx.HTTPError, OSError, ValueError) as exc:
         print(f"Snapshot failed: {exc}", file=sys.stderr)
@@ -119,6 +132,7 @@ def main() -> int:
     print(f"Saved: {output}")
     print(f"Bytes: {len(content)}")
     print(f"SHA-256: {checksum}")
+    print(f"Manifest: {manifest_path}")
     return 0
 
 
