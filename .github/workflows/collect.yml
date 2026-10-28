@@ -1,0 +1,57 @@
+name: Collect Pilot
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: collect-sirith-maldama-part1
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    name: Collect and validate pilot
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.13"
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          version: "0.13.6"
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - name: Install locked dependencies
+        run: uv sync --locked --extra dev --python "3.13"
+
+      - name: Run tests
+        run: uv run --locked --extra dev pytest -q
+
+      - name: Run pilot pipeline
+        run: |
+          uv run --locked --extra dev python -m sinhala_corpus.pipeline \
+            --config configs/pipelines/sirith-maldama-part1.yaml
+
+      - name: Save audit and summary reports
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: pilot-reports-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            artifacts/audits/sirith-maldama-part1.json
+            artifacts/pipelines/sirith-maldama-part1.json
+          if-no-files-found: warn
+          retention-days: 14
