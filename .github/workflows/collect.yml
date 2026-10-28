@@ -40,6 +40,13 @@ jobs:
       - name: Run tests
         run: uv run --locked --extra dev pytest -q
 
+      - name: Verify private staging access
+        if: github.ref == 'refs/heads/main'
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          uv run --locked --extra dev python -m sinhala_corpus.staging
+
       - name: Run pilot pipeline
         run: |
           uv run --locked --extra dev python -m sinhala_corpus.pipeline \
