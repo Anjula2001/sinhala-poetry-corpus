@@ -1,0 +1,6 @@
+schema_version: 1
+name: sirith-maldama-part1
+source_id: wikisource_si
+revision_id: 1042800
+source_config: configs/sources.yaml
+review_file: configs/reviews/sirith-maldama-part1.yaml
