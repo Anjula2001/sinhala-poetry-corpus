@@ -71,9 +71,360 @@ decisions:
   reviewed_at: null
   notes: 'Extraction matches the source, but its final line contains joined words:
     සැපතටත්උතුමය. Requires editorial verification; no correction applied.'
+- verse_number: 11
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:37:52.750030Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Empty trailing br markup removed
+    where present. Not checked against an independent printed edition.
+- verse_number: 12
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:37:52.750030Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Empty trailing br markup removed
+    where present. Not checked against an independent printed edition.
+- verse_number: 13
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:37:52.750030Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Empty trailing br markup removed
+    where present. Not checked against an independent printed edition.
+- verse_number: 14
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:37:52.750030Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Empty trailing br markup removed
+    where present. Not checked against an independent printed edition.
+- verse_number: 15
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:37:52.750030Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Empty trailing br markup removed
+    where present. Not checked against an independent printed edition.
+- verse_number: 16
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:37:52.750030Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Empty trailing br markup removed
+    where present. Not checked against an independent printed edition.
+- verse_number: 17
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:37:52.750030Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Empty trailing br markup removed
+    where present. Not checked against an independent printed edition.
+- verse_number: 18
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:37:52.750030Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Empty trailing br markup removed
+    where present. Not checked against an independent printed edition.
+- verse_number: 19
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:37:52.750030Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Empty trailing br markup removed
+    where present. Not checked against an independent printed edition.
+- verse_number: 20
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:37:52.750030Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Empty trailing br markup removed
+    where present. Not checked against an independent printed edition.
+- verse_number: 21
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:40:04.733395Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Source spelling retained without
+    correction. Not checked against an independent printed edition.
+- verse_number: 22
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:40:04.733395Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Source spelling retained without
+    correction. Not checked against an independent printed edition.
+- verse_number: 23
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:40:04.733395Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Source spelling retained without
+    correction. Not checked against an independent printed edition.
+- verse_number: 24
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:40:04.733395Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Source spelling retained without
+    correction. Not checked against an independent printed edition.
+- verse_number: 25
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:40:04.733395Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Source spelling retained without
+    correction. Not checked against an independent printed edition.
+- verse_number: 26
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:40:04.733395Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Source spelling retained without
+    correction. Not checked against an independent printed edition.
+- verse_number: 27
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:40:04.733395Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Source spelling retained without
+    correction. Not checked against an independent printed edition.
+- verse_number: 28
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:40:04.733395Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Source spelling retained without
+    correction. Not checked against an independent printed edition.
+- verse_number: 29
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:40:04.733395Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Source spelling retained without
+    correction. Not checked against an independent printed edition.
+- verse_number: 30
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:40:04.733395Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Source spelling retained without
+    correction. Not checked against an independent printed edition.
+- verse_number: 31
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:41:39.411058Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 32
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:41:39.411058Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 33
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:41:39.411058Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 34
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:41:39.411058Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 35
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:41:39.411058Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 36
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  notes: Extraction matches the source. The word තිඛෙයි may contain a transcription
+    error; requires editorial verification. No correction applied.
+- verse_number: 37
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:41:39.411058Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 38
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:41:39.411058Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 39
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  notes: Extraction matches the source. The phrase ඉගනෙ ගතහොත් requires editorial
+    verification. No correction applied.
+- verse_number: 40
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:41:39.411058Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 41
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:43:39.597323Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 42
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:43:39.597323Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 43
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:43:39.597323Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 44
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:43:39.597323Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 45
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:43:39.597323Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 46
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:43:39.597323Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 47
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:43:39.597323Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 48
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:43:39.597323Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
 - verse_number: 49
   status: pending
   reviewer: null
   reviewed_at: null
   notes: Three unexpected greater-than characters occur in the source text. Preserve
     them until checked against a reliable edition.
+- verse_number: 50
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  notes: Extraction matches the source. Word separation in තවමට කියමින් requires editorial
+    verification. No correction applied.
+- verse_number: 51
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:45:25.527385Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Category markup excluded where
+    present. Not checked against an independent printed edition.
+- verse_number: 52
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:45:25.527385Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Category markup excluded where
+    present. Not checked against an independent printed edition.
+- verse_number: 53
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  notes: Extraction matches the source. Verify මළමු and the third line's wording against
+    an independent edition. No correction applied.
+- verse_number: 54
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  notes: Extraction matches the source. Verify vowel length in ඌ මු against an independent
+    edition. No correction applied.
+- verse_number: 55
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:45:25.527385Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Category markup excluded where
+    present. Not checked against an independent printed edition.
+- verse_number: 56
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:45:25.527385Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Category markup excluded where
+    present. Not checked against an independent printed edition.
+- verse_number: 57
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:45:25.527385Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Category markup excluded where
+    present. Not checked against an independent printed edition.
+- verse_number: 58
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  notes: Extraction matches the source. Verify the spelling in කොලහල බණ against an
+    independent edition. No correction applied.
+- verse_number: 59
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:45:25.527385Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Category markup excluded where
+    present. Not checked against an independent printed edition.
+- verse_number: 60
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:45:25.527385Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Category markup excluded where
+    present. Not checked against an independent printed edition.
+- verse_number: 61
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:45:25.527385Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Category markup excluded where
+    present. Not checked against an independent printed edition.
+- verse_number: 62
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:45:25.527385Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Category markup excluded where
+    present. Not checked against an independent printed edition.
