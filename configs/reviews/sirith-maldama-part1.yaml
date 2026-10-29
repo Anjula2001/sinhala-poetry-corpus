@@ -1,13 +1,79 @@
 schema_version: 1
 source_id: wikisource_si
 revision_id: 1042800
-
-# Missing decisions mean pending, never approved.
 decisions:
-  - verse_number: 49
-    status: pending
-    reviewer: null
-    reviewed_at: null
-    notes: >-
-      Three unexpected greater-than characters occur in the source
-      text. Preserve them until checked against a reliable edition.
+- verse_number: 1
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:33:03.306936Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 2
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:33:03.306936Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 3
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:33:03.306936Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 4
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:33:03.306936Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 5
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:33:03.306936Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 6
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:33:03.306936Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 7
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:33:03.306936Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 8
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:33:03.306936Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 9
+  status: approved
+  reviewer: assistant:chatgpt
+  reviewed_at: '2026-10-29T07:33:03.306936Z'
+  notes: Assistant-assisted comparison against source revision 1042800. Words and
+    line order preserved; layout spacing normalized. Not checked against an independent
+    printed edition.
+- verse_number: 10
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  notes: 'Extraction matches the source, but its final line contains joined words:
+    සැපතටත්උතුමය. Requires editorial verification; no correction applied.'
+- verse_number: 49
+  status: pending
+  reviewer: null
+  reviewed_at: null
+  notes: Three unexpected greater-than characters occur in the source text. Preserve
+    them until checked against a reliable edition.
