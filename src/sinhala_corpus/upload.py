@@ -127,6 +127,11 @@ def main() -> None:
         code_commit=os.environ["GITHUB_SHA"],
     )
 
+    output_path = os.environ.get("GITHUB_OUTPUT")
+    if output_path:
+        with open(output_path, "a", encoding="utf-8") as file:
+            file.write(f"commit={commit}\n")
+
     print("Private staging upload completed.")
     print("Repository:", STAGING_REPO)
     print("Hugging Face commit:", commit)

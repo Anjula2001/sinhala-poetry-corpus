@@ -53,11 +53,23 @@ jobs:
             --config configs/pipelines/sirith-maldama-part1.yaml
 
       - name: Upload private staging bundle
+        id: staging_upload
         if: github.ref == 'refs/heads/main'
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           uv run --locked --extra dev python -m sinhala_corpus.upload
+
+      - name: Verify staging restore
+        if: github.ref == 'refs/heads/main'
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          uv run --locked --extra dev python -m sinhala_corpus.restore \
+            --commit "${{ steps.staging_upload.outputs.commit }}" \
+            --run-id "${{ github.run_id }}" \
+            --run-attempt "${{ github.run_attempt }}" \
+            --code-commit "${{ github.sha }}"
 
       - name: Save audit and summary reports
         if: always()
@@ -67,6 +79,7 @@ jobs:
           path: |
             artifacts/audits/sirith-maldama-part1.json
             artifacts/pipelines/sirith-maldama-part1.json
+            artifacts/restore-checks/*.json
           if-no-files-found: warn
           retention-days: 14
 
